@@ -1,0 +1,25 @@
+/* Custom styles to complement Tailwind */
+.upload-area {
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #E1306C;
+    transform: translateY(-2px);
+}
+
+.caption-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #E1306C;
+    transition: all 0.2s ease;
+}
+
+.caption-item:hover {
+    transform: translateX(4px);
+}
+
+/* Instagram color palette for reference */
+.bg-instagram-pink { background-color: #E1306C; }
+.bg-instagram-purple { background-color: #833AB4; }
+.bg-instagram-orange { background-color: #F56040; }
+.bg-instagram-yellow { background-color: #FCAF45; }
