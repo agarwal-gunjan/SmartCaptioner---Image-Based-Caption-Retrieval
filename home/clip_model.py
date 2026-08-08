@@ -16,23 +16,28 @@ clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch16")
 clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch16")
 
 # Define paths to the dataset and folders
-dataset_path = 'D:/Gunjan/minor project/smartcaption/clip_data/dataset2.csv'
-mountain_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/mountain'
-beach_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/beaches'
-desi_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/desi'
-baddie_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/baddie'
-bday_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/bday'
-Cafe_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Cafe'
-Cats_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Cats'
-CHRISTMAS_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/CHRISTMAS'
-couples_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/couples'
-diwali_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/diwali'
-Dogs_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Dogs'
-Friends_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Friends'
-Mirror_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Mirror'
-Monsoon_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Monsoon'
-Sky_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Skyyy'
-Sunkissed_folder = 'D:/Gunjan/minor project/smartcaption/clip_data/Sunkissed'
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+clip_data_path = BASE_DIR / 'clip_data'
+
+dataset_path = clip_data_path / 'dataset2.csv'
+mountain_folder = clip_data_path / 'mountain'
+beach_folder = clip_data_path / 'beaches'
+desi_folder = clip_data_path / 'desi'
+baddie_folder = clip_data_path / 'baddie'
+bday_folder = clip_data_path / 'bday'
+Cafe_folder = clip_data_path / 'Cafe'
+Cats_folder = clip_data_path / 'Cats'
+CHRISTMAS_folder = clip_data_path / 'CHRISTMAS'
+couples_folder = clip_data_path / 'couples'
+diwali_folder = clip_data_path / 'diwali'
+Dogs_folder = clip_data_path / 'Dogs'
+Friends_folder = clip_data_path / 'Friends'
+Mirror_folder = clip_data_path / 'Mirror'
+Monsoon_folder = clip_data_path / 'Monsoon'
+Sky_folder = clip_data_path / 'Skyyy'
+Sunkissed_folder = clip_data_path / 'Sunkissed'
 df = pd.read_csv(dataset_path)
 
 # Prepare category-based caption mappings
